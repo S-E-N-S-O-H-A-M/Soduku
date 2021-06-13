@@ -125,20 +125,18 @@ button.onclick = function() {
     xhrRequest.send()
 }
 
-//to be completed by student, function should not return anything
-// you can make a call to changeboard(board) function to update the state on the screen
-//returns a boolean true of false
+
 
 function isSafe(board, r, c, no) {
 
 
-    //not repeating in the same row or column 
+
     for (var i = 0; i < 9; i++) {
         if (board[i][c] == no || board[r][i] == no) {
             return false;
         }
     }
-    //subgrid
+
     var sx = r - r % 3;
     var sy = c - c % 3;
 
